@@ -152,7 +152,6 @@ const getPostComments = async (postId) => {
 const displayComments = async (postId) => {
     if (!postId) return;
     const section = document.createElement('section');
-    // section.setAttribute(section.dataset.postId, postId);
     section.dataset.postId = postId;
     section.classList.add('comments');
     section.classList.add('hide');
@@ -165,7 +164,6 @@ const displayComments = async (postId) => {
 const createPosts = async (posts) => {
     if (!posts) return;
     const fragment = document.createDocumentFragment();
-    // posts.forEach(async (post) => {
     for (const post of posts) {
         const article = document.createElement('article');
         const h2 = createElemWithText('h2', post.title);
